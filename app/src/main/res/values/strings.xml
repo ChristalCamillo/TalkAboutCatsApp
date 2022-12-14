@@ -6,10 +6,29 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="register_now">Crie agora</string>
+    <string name="email">E-mail</string>
+    <string name="name">Nome</string>
+    <string name="register">Registrar</string>
+    <string name="exit">Sair</string>
+    <string name="register_now_title">REGISTRAR CONTA</string>
+    <string name="informations">É novo por aqui? Cadastre-se</string>
+    <string name="return_to_login">Já tenho uma conta</string>
+    <string name="bv_register_now">Criar conta</string>
+    <string name="password_confirmation">Confirme sua senha</string>
+    <string name="hello_zupper"><![CDATA[Olá, <Nome Zupper>]]></string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="talk_about">Talk About</string>
     <string name="cats">Cats</string>
     <string name="lineart_image_of_a_laying_cat">lineart image of a laying cat</string>
+    <string name="password">Password</string>
+    <string name="password_visibility">password</string>
+    <string name="text_login">Entrar</string>
+    <string name="e_mail">E-mail</string>
+    <string name="senha">Senha</string>
+    <string name="novo_por_aqui_cadastre_se">É novo por aqui? Cadastre-se</string>
+    <string name="ou">ou</string>
+    <string name="cat_description">imagem de um gato preto vetorizado sentado silhueta</string>
 </resources>

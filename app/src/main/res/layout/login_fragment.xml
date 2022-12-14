@@ -1,124 +1,115 @@
-
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/brown">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/e_mail"
+        android:textColor="@color/purple_500"
+        android:textSize="@dimen/dimen14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/et_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.186"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.956" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/etUserEmailInsert"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_30"
-            android:layout_marginEnd="@dimen/margin_30"
-            android:fontFamily="@font/montserrat__bold"
-            android:selectAllOnFocus="true"
-            app:boxBackgroundColor="@color/white"
-            app:helperTextTextColor="@color/purple_500"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:text="@string/senha"
+        android:textColor="@color/purple_500"
+        android:textSize="@dimen/dimen14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/et_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.183"
+        app:layout_constraintStart_toStartOf="parent" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etUserEmail"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/montserrat__bold"
-                android:inputType="textEmailAddress" />
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="274dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="180dp"
+        android:autofillHints=""
+        android:background="@drawable/round_border"
+        android:drawableStart="@drawable/ic_baseline_email_24"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:paddingStart="@dimen/margin5"
+        android:textAlignment="viewStart"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="274dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:autofillHints=""
+        android:background="@drawable/round_border"
+        android:drawableStart="@drawable/ic_baseline_lock_24"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:paddingStart="@dimen/margin5"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_email" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/etPasswordInsert"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_30"
-            android:layout_marginEnd="@dimen/margin_30"
-            android:focusableInTouchMode="true"
-            android:hint="@string/password"
-            app:boxBackgroundColor="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etUserEmailInsert"
-            app:passwordToggleContentDescription="@string/password_visibility"
-            app:passwordToggleEnabled="true"
-            app:passwordToggleTint="@color/darkBlue_zup">
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/ou"
+        android:textColor="#512DA8"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_password" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etPassword"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:ems="15"
-                android:fontFamily="@font/montserrat__bold"
-                android:inputType="textPassword"
-                android:paddingEnd="@dimen/margin_40" />
+    <TextView
+        android:id="@+id/btn_cadastre_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/novo_por_aqui_cadastre_se"
+        android:textColor="#673AB7"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+    <ImageView
+        android:layout_width="116dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="22dp"
+        android:src="@drawable/ic_list_facts"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cadastre_login"
+        app:layout_constraintVertical_bias="0.153"
+        android:contentDescription="@string/cat_description" />
 
-        <Button
-            android:id="@+id/bvLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/size_40"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/margin_25"
-            android:backgroundTint="@color/red_zup"
-            android:fontFamily="@font/montserrat__bold"
-            android:text="@string/text_login"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etPasswordInsert" />
 
-        <TextView
-            android:id="@+id/tvInformation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_25"
-            android:fontFamily="@font/montserrat__regular"
-            android:lineSpacingExtra="@dimen/spacing_8"
-            android:text="@string/informations"
-            android:textAlignment="center"
-            android:textColor="@color/blue_zup"
-            android:textSize="@dimen/fontSize_16"
-            app:layout_constraintEnd_toEndOf="@+id/bvLogin"
-            app:layout_constraintStart_toStartOf="@+id/bvLogin"
-            app:layout_constraintTop_toBottomOf="@+id/bvLogin" />
-
-        <Button
-            android:id="@+id/bvRegisterNow"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/size_40"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/margin_25"
-            android:backgroundTint="@color/lightGray_zup"
-            android:fontFamily="@font/montserrat__bold"
-            android:text="@string/register_now"
-            android:textAlignment="center"
-            android:textColor="@color/blue_zup"
-            android:textSize="@dimen/fontSize_16"
-            app:layout_constraintEnd_toEndOf="@+id/tvInformation"
-            app:layout_constraintStart_toStartOf="@+id/tvInformation"
-            app:layout_constraintTop_toBottomOf="@id/tvInformation" />
-
-        <ImageView
-            android:id="@+id/ivLogoZupColorful"
-            android:layout_width="@dimen/margin_0"
-            android:layout_height="@dimen/size_85"
-            android:layout_marginTop="@dimen/margin_50"
-            android:contentDescription="@string/logo_colorful"
-            android:src="@drawable/logo_zup_colorido"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bvRegisterNow" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
