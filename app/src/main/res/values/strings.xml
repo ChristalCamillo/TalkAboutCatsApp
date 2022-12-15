@@ -31,4 +31,12 @@
     <string name="novo_por_aqui_cadastre_se">É novo por aqui? Cadastre-se</string>
     <string name="ou">ou</string>
     <string name="cat_description">imagem de um gato preto vetorizado sentado silhueta</string>
+    <string name="entrar">Entrar</string>
+    <string name="nome">Nome</string>
+    <string name="seu_nome">Seu nome</string>
+    <string name="salvar">Salvar</string>
+    <string name="j_tem_uma_conta_fa_a_login">Já tem uma conta? Faça login</string>
+    <string name="criar_uma_conta">Criar uma conta</string>
+    <string name="see_ur_favorite_facts">See ur favorite facts</string>
+    <string name="content_desc_like_button">Coração vetorizado de like (cinza) e dislike (roxo)</string>
 </resources>
