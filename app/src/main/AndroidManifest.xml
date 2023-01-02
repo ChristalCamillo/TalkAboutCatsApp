@@ -13,16 +13,15 @@
         android:theme="@style/Theme.TalkAboutCats"
         tools:targetApi="31">
         <activity
-            android:name=".HomeActivity"
+            android:name=".ui.home.view.HomeActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.splash.view.SplashActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.TalkAboutCats.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,5 +38,4 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
-
 </manifest>

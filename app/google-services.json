@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "908934833137",
+    "project_id": "talkaboutcats-c5086",
+    "storage_bucket": "talkaboutcats-c5086.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:908934833137:android:41b0f16a731c9d815d9a50",
+        "android_client_info": {
+          "package_name": "br.com.zup.talkaboutcats"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "908934833137-9opjm7ifjekl8sc9kqj6e37siauhtpbb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1b7JWOgozb2JZMY5RaTCdNFD-sG3qvdk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "908934833137-9opjm7ifjekl8sc9kqj6e37siauhtpbb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
