@@ -10,7 +10,7 @@ class CatFactsUseCase(application: Application) {
     private val catFactsDAO = CatFactsDatabase.getDatabase(application).catFactsDao()
     private val catFactsRepository = CatFactsRepository(catFactsDAO)
 
-    suspend fun getAllCatFacts(): ViewState<List<CatFactsResult>> {
+    private suspend fun getAllCatFacts(): ViewState<List<CatFactsResult>> {
         return try {
             val catfacts = catFactsRepository.getAllCatFacts()
             ViewState.Success(catfacts)

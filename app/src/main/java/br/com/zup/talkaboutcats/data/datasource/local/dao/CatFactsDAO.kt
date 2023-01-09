@@ -2,11 +2,10 @@ package br.com.zup.talkaboutcats.data.datasource.local.dao
 
 import androidx.room.*
 import br.com.zup.talkaboutcats.data.model.CatFactsResult
-import br.com.zup.talkaboutcats.domain.model.CatFacts
 
 @Dao
 interface CatFactsDAO {
-    @Query("SELECT * FROM catfacts ORDER BY id ASC")
+    @Query("SELECT * FROM catfacts")
     fun getAllCatFacts(): List<CatFactsResult>
 
     @Query("SELECT * FROM catfacts WHERE isFavorite = 1")
