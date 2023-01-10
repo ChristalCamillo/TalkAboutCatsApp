@@ -8,9 +8,7 @@ import br.com.zup.talkaboutcats.databinding.ActivityRegisterBinding
 import br.com.zup.talkaboutcats.domain.model.User
 import br.com.zup.talkaboutcats.ui.home.view.HomeActivity
 import br.com.zup.talkaboutcats.ui.register.viewmodel.RegisterViewModel
-import br.com.zup.talkaboutcats.utils.REGISTER
 import br.com.zup.talkaboutcats.utils.USER_KEY
-
 import com.google.android.material.snackbar.Snackbar
 
 class RegisterActivity : AppCompatActivity() {
@@ -24,13 +22,11 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportActionBar?.title = REGISTER
 
-        binding.btnCadastreLogin.setOnClickListener {
+        binding.btnSalvar.setOnClickListener {
             val user = getDataUser()
             viewModel.registerUser(user)
         }
-
         initObservers()
     }
 

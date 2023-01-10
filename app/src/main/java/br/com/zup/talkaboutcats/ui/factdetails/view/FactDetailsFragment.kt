@@ -71,10 +71,10 @@ class FactDetailsFragment : Fragment() {
 
     private fun showFavoriteUpdateToast(){
         if(catfacts.isFavorite){
-            Toast.makeText(context, "${catfacts.factId} foi favoritado com sucesso!", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "${catfacts.id} foi favoritado com sucesso!", Toast.LENGTH_LONG).show()
         }
         else{
-            Toast.makeText(context, "${catfacts.factId} foi desfavoritado", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "${catfacts.id} foi desfavoritado", Toast.LENGTH_SHORT).show()
         }
     }
 }

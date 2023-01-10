@@ -6,11 +6,11 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.parcelize.Parcelize
 
-@Entity(tableName = "fatosdegatos")
+@Entity(tableName = "catfacts")
 @Parcelize
 data class CatFacts(
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "id_fact")
+    @ColumnInfo(name = "id")
     var idFact: Long = 1,
     @ColumnInfo(name = "catfact")
     var catfact: String,

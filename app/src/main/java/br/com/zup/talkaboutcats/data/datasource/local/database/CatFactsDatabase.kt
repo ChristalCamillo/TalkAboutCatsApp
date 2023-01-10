@@ -5,9 +5,9 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import br.com.zup.talkaboutcats.data.datasource.local.dao.CatFactsDAO
-import br.com.zup.talkaboutcats.domain.model.CatFacts
+import br.com.zup.talkaboutcats.data.model.CatFactsResult
 
-@Database(entities = [CatFacts::class], version = 1)
+@Database(entities = [CatFactsResult::class], version = 2)
 abstract class CatFactsDatabase : RoomDatabase() {
     abstract fun catFactsDao(): CatFactsDAO
 

@@ -15,7 +15,7 @@ class CatFactsListViewModel(application: Application): AndroidViewModel(applicat
     private val catFactsUseCase = CatFactsUseCase(application)
     val catFactsListState = MutableLiveData<ViewState<List<CatFactsResult>>>()
 
-    fun getAllCatFacts(){
+    fun getAllCatFactsNetwork(){
         viewModelScope.launch {
             try {
                 val response = withContext(Dispatchers.IO) {

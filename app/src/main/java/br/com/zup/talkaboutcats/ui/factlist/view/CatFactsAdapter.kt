@@ -11,8 +11,8 @@ class CatFactsAdapter(
     private val catFactsClick: (CatFacts: CatFactsResult) -> Unit
 ): RecyclerView.Adapter<CatFactsAdapter.ViewHolder>() {
     class ViewHolder(val binding: FactItemBinding): RecyclerView.ViewHolder(binding.root){
-        fun showCatFacts(CatFacts: CatFactsResult){
-            binding.tvCatFact.text = CatFacts.catfact
+        fun showCatFacts(catFacts: CatFactsResult){
+            binding.tvCatFact.text = catFacts.id.toString()
         }
     }
 
