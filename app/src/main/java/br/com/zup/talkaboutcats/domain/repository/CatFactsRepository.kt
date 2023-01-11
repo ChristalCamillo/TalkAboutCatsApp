@@ -7,15 +7,15 @@ import br.com.zup.talkaboutcats.data.model.CatFactsResult
 
 class CatFactsRepository(private val catFactsDAO: CatFactsDAO) {
 
-    suspend fun getAllCatFacts(): List<CatFactsResult> = catFactsDAO.getAllCatFacts()
+    fun getAllCatFacts(): List<CatFactsResult> = catFactsDAO.getAllCatFacts()
 
-    suspend fun insertAllCatFactsDB(listCatFacts: List<CatFactsResult>) {
+    fun insertAllCatFactsDB(listCatFacts: List<CatFactsResult>) {
         catFactsDAO.insertAllCatFacts(listCatFacts)
     }
 
-    suspend fun getAllCatFactsFavorited(): List<CatFactsResult> = catFactsDAO.getAllCatFactsFavorited()
+    fun getAllCatFactsFavorited(): List<CatFactsResult> = catFactsDAO.getAllCatFactsFavorited()
 
-    suspend fun updateCatFactsFavorited(catFacts: CatFactsResult){
+    fun updateCatFactsFavorited(catFacts: CatFactsResult){
         catFactsDAO.updateCatFactsFavorite(catFacts)
     }
 

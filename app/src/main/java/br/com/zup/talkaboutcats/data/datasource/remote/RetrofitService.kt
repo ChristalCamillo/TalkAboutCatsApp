@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit
 
 class RetrofitService {
     companion object {
-        const val BASE_URL = "https://meowfacts.herokuapp.com/"
+        const val BASE_URL = "https://meowfacts.herokuapp.com"
 
         //Inicializarmos o Retrofit com suas configurações
         private val retrofit: Retrofit by lazy {

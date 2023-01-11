@@ -10,7 +10,7 @@ class CatFactsUseCase(application: Application) {
     private val catFactsDAO = CatFactsDatabase.getDatabase(application).catFactsDao()
     private val catFactsRepository = CatFactsRepository(catFactsDAO)
 
-    private suspend fun getAllCatFacts(): ViewState<List<CatFactsResult>> {
+    private fun getAllCatFacts(): ViewState<List<CatFactsResult>> {
         return try {
             val catfacts = catFactsRepository.getAllCatFacts()
             ViewState.Success(catfacts)
@@ -19,7 +19,7 @@ class CatFactsUseCase(application: Application) {
         }
     }
 
-    suspend fun getAllCatFactsFavorited(): ViewState<List<CatFactsResult>> {
+    fun getAllCatFactsFavorited(): ViewState<List<CatFactsResult>> {
         return try {
             val catfacts = catFactsRepository.getAllCatFactsFavorited()
             ViewState.Success(catfacts)
@@ -29,7 +29,7 @@ class CatFactsUseCase(application: Application) {
         }
     }
 
-    suspend fun updateCatFactsFavorite(catfacts: CatFactsResult): ViewState<CatFactsResult> {
+    fun updateCatFactsFavorite(catfacts: CatFactsResult): ViewState<CatFactsResult> {
         return try {
             catFactsRepository.updateCatFactsFavorited(catfacts)
             ViewState.Success(catfacts)

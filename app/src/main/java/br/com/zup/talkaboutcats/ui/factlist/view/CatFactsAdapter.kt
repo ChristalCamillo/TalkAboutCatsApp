@@ -8,8 +8,9 @@ import br.com.zup.talkaboutcats.databinding.FactItemBinding
 
 class CatFactsAdapter(
     private var catFactsList: MutableList<CatFactsResult> = mutableListOf(),
-    private val catFactsClick: (CatFacts: CatFactsResult) -> Unit
+    private val catFactsClick: (catFacts: CatFactsResult) -> Unit
 ): RecyclerView.Adapter<CatFactsAdapter.ViewHolder>() {
+
     class ViewHolder(val binding: FactItemBinding): RecyclerView.ViewHolder(binding.root){
         fun showCatFacts(catFacts: CatFactsResult){
             binding.tvCatFact.text = catFacts.id.toString()

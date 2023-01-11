@@ -5,7 +5,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface CatFactsAPI {
-    @GET("?count=10")
+    @GET("/")
     suspend fun getAllCatFactsNetwork(
         @Query("count")
         count: Int
