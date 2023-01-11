@@ -6,5 +6,5 @@ import com.google.gson.annotations.SerializedName
 
 data class CatFactsResponse(
     @SerializedName("data")
-    val `data`: List<CatFactsResult> = listOf()
+    val `data`: List<String> = listOf()
 )

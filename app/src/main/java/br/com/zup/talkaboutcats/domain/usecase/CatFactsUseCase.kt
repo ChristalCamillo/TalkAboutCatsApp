@@ -12,7 +12,7 @@ class CatFactsUseCase(application: Application) {
 
     private fun getAllCatFacts(): ViewState<List<CatFactsResult>> {
         return try {
-            val catfacts = catFactsRepository.getAllCatFacts()
+            val catfacts = catFactsRepository.getAllCatFactsDB()
             ViewState.Success(catfacts)
         } catch (ex: Exception) {
             ViewState.Error(Exception("Não foi possível carregar a lista de fatos de gatos do Banco de Dados!"))
@@ -41,8 +41,8 @@ class CatFactsUseCase(application: Application) {
     suspend fun getAllCatFactsNetwork(): ViewState<List<CatFactsResult>> {
         return try {
             val response = catFactsRepository.geAllCatFactsNetwork()
-            catFactsRepository.insertAllCatFactsDB(response.data)
-            ViewState.Success(response.data)
+            //catFactsRepository.insertAllCatFactsDB(response.data)
+            ViewState.Success(response)
         } catch (ex: Exception) {
             getAllCatFacts()
         }
