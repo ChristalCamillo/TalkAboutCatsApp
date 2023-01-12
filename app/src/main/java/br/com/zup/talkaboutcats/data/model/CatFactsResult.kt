@@ -10,9 +10,9 @@ import kotlinx.parcelize.Parcelize
 @Entity(tableName = "catfacts")
 data class CatFactsResult(
     @SerializedName("id")
-    @PrimaryKey(autoGenerate = false)
-    var id: Int = 0,
+    @PrimaryKey(autoGenerate = true)
+    var id: Int?,
     @SerializedName("catfact")
-    var catfact: String = "",
+    var catfact: String,
     var isFavorite: Boolean
 ) : Parcelable

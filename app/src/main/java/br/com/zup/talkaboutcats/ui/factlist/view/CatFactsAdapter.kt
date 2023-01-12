@@ -13,7 +13,7 @@ class CatFactsAdapter(
 
     class ViewHolder(val binding: FactItemBinding): RecyclerView.ViewHolder(binding.root){
         fun showCatFacts(catFacts: CatFactsResult){
-            binding.tvCatFact.text = catFacts.id.toString()
+            binding.tvCatFact.text = catFacts.catfact.toString()
         }
     }
 
