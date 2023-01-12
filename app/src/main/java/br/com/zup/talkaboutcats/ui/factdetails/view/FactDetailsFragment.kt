@@ -41,7 +41,7 @@ class FactDetailsFragment : Fragment() {
             if(catfacts.id != null){
                 viewModel.updateCatFactsFavorite(catfacts)
             }else{
-
+                viewModel.insertCatFactFavorite(catfacts)
             }
 
             showFavoriteUpdateToast()

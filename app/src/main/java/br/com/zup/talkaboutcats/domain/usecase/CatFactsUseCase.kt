@@ -38,6 +38,15 @@ class CatFactsUseCase(application: Application) {
         }
     }
 
+    fun insertCatFactFavorite(catfact: CatFactsResult): ViewState<CatFactsResult> {
+        return try {
+            catFactsRepository.insertCatFactFavorited(catfact)
+            ViewState.Success(catfact)
+        } catch (ex: Exception) {
+            ViewState.Error(Exception("Não foi possível atualizar o fato favoritado!"))
+        }
+    }
+
     suspend fun getAllCatFactsNetwork(): ViewState<List<CatFactsResult>> {
         return try {
             val response = catFactsRepository.geAllCatFactsNetwork()

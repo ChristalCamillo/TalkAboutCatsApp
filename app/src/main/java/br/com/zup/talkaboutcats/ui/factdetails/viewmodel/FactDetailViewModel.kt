@@ -27,4 +27,17 @@ class FactDetailViewModel(application: Application): AndroidViewModel(applicatio
             }
         }
     }
+
+    fun insertCatFactFavorite(catfact: CatFactsResult){
+        viewModelScope.launch {
+            try {
+                val response = withContext(Dispatchers.IO){
+                    catFactsUseCase.insertCatFactFavorite(catfact)
+                }
+                favoriteCatFactsState.value = response
+            }catch (e: Exception){
+                favoriteCatFactsState.value = ViewState.Error(Exception("Erro na favoritagem"))
+            }
+        }
+    }
 }

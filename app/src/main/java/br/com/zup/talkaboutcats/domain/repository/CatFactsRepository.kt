@@ -18,6 +18,10 @@ class CatFactsRepository(private val catFactsDAO: CatFactsDAO) {
         catFactsDAO.updateCatFactsFavorite(catFacts)
     }
 
+    fun insertCatFactFavorited(catFact: CatFactsResult){
+        catFactsDAO.insertCatFact(catFact)
+    }
+
 
     suspend fun geAllCatFactsNetwork(): MutableList<CatFactsResult> {
        var apiReturn = RetrofitService.apiService.getAllCatFactsNetwork(10)
