@@ -2,9 +2,9 @@ package br.com.zup.talkaboutcats.ui.factlist.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import br.com.zup.talkaboutcats.data.model.CatFactsResult
+import br.com.zup.talkaboutcats.domain.model.SingleLiveEvent
 import br.com.zup.talkaboutcats.domain.usecase.CatFactsUseCase
 import br.com.zup.talkaboutcats.ui.viewstate.ViewState
 import kotlinx.coroutines.Dispatchers
@@ -13,7 +13,7 @@ import kotlinx.coroutines.withContext
 
 class CatFactsListViewModel(application: Application): AndroidViewModel(application) {
     private val catFactsUseCase = CatFactsUseCase(application)
-    val catFactsListState = MutableLiveData<ViewState<List<CatFactsResult>>>()
+    val catFactsListState = SingleLiveEvent<ViewState<List<CatFactsResult>>>()
 
     fun getAllCatFactsNetwork(){
         viewModelScope.launch {

@@ -48,11 +48,6 @@ class FactListFragment : Fragment() {
         }
     }
 
-    private fun setUpRvCatFactsList() {
-        binding.rvFactsList.adapter = catFactsAdapter
-        binding.rvFactsList.layoutManager = LinearLayoutManager(context)
-    }
-
     private fun initObserver(){
         viewModel.catFactsListState.observe(this.viewLifecycleOwner){
             when(it){
@@ -62,8 +57,14 @@ class FactListFragment : Fragment() {
                 is ViewState.Error -> {
                     Toast.makeText(context, "${it.throwable.message}", Toast.LENGTH_LONG).show()
                 }
+                else -> {}
             }
         }
+    }
+
+    private fun setUpRvCatFactsList() {
+        binding.rvFactsList.adapter = catFactsAdapter
+        binding.rvFactsList.layoutManager = LinearLayoutManager(context)
     }
 
     private fun goToCatFactsDetail(catfacts: CatFactsResult) {

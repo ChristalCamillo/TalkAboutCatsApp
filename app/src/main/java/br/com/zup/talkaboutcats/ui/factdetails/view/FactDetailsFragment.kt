@@ -51,7 +51,7 @@ class FactDetailsFragment : Fragment() {
             catfacts = data
 
             catfacts.let {
-                binding.tvMeowfactDetail.text = it.toString()
+                binding.tvMeowfactDetail.text = it.catfact
                 updateFavoriteIconColor()
             }
         }else{
@@ -71,10 +71,10 @@ class FactDetailsFragment : Fragment() {
 
     private fun showFavoriteUpdateToast(){
         if(catfacts.isFavorite){
-            Toast.makeText(context, "${catfacts.id} foi favoritado com sucesso!", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "fato foi favoritado com sucesso!", Toast.LENGTH_LONG).show()
         }
         else{
-            Toast.makeText(context, "${catfacts.id} foi desfavoritado", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "fato foi desfavoritado", Toast.LENGTH_SHORT).show()
         }
     }
 }

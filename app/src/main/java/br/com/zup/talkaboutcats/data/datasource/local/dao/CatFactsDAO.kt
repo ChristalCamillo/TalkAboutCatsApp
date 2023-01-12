@@ -5,7 +5,7 @@ import br.com.zup.talkaboutcats.data.model.CatFactsResult
 
 @Dao
 interface CatFactsDAO {
-    @Query("SELECT * FROM catfacts")
+    @Query("SELECT * FROM catfacts ORDER BY id ASC")
     fun getAllCatFacts(): List<CatFactsResult>
 
     @Query("SELECT * FROM catfacts WHERE isFavorite = 1")

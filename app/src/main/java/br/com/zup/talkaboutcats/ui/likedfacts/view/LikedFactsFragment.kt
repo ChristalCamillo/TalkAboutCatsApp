@@ -32,7 +32,7 @@ class LikedFactsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentLikedFactsBinding.inflate(inflater, container, false)
         return binding.root
     }
