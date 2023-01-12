@@ -38,7 +38,12 @@ class FactDetailsFragment : Fragment() {
         binding.likeButton.setOnClickListener {
             catfacts.isFavorite = !catfacts.isFavorite
             updateFavoriteIconColor()
-            viewModel.updateCatFactsFavorite(catfacts)
+            if(catfacts.id != null){
+                viewModel.updateCatFactsFavorite(catfacts)
+            }else{
+
+            }
+
             showFavoriteUpdateToast()
         }
     }
@@ -51,7 +56,7 @@ class FactDetailsFragment : Fragment() {
             catfacts = data
 
             catfacts.let {
-                binding.tvMeowfactDetail.text = it.toString()
+                binding.tvMeowfactDetail.text = it.catfact
                 updateFavoriteIconColor()
             }
         }else{
