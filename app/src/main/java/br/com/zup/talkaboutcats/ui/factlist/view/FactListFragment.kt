@@ -40,7 +40,9 @@ class FactListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setUpRvCatFactsList()
-        viewModel.getAllCatFactsNetwork()
+        if(viewModel.catFactsListState.value ==null){
+            viewModel.getAllCatFactsNetwork()
+        }
         initObserver()
 
         binding.button.setOnClickListener {
