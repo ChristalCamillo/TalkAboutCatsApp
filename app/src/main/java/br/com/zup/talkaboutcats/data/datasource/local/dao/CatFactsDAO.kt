@@ -15,7 +15,7 @@ interface CatFactsDAO {
     fun insertAllCatFacts(listCatFacts: List<CatFactsResult>)
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun insertCatFact(catFact: CatFactsResult)
+    fun insertCatFact(catFact: CatFactsResult):Long
 
     @Update(onConflict = OnConflictStrategy.IGNORE)
     fun updateCatFactsFavorite(catfacts: CatFactsResult)

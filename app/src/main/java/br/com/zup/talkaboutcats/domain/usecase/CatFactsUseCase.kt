@@ -40,8 +40,8 @@ class CatFactsUseCase(application: Application) {
 
     fun insertCatFactFavorite(catfact: CatFactsResult): ViewState<CatFactsResult> {
         return try {
-            catFactsRepository.insertCatFactFavorited(catfact)
-            ViewState.Success(catfact)
+            var catfactInserted = catFactsRepository.insertCatFactFavorited(catfact)
+            ViewState.Success(catfactInserted)
         } catch (ex: Exception) {
             ViewState.Error(Exception("Não foi possível atualizar o fato favoritado!"))
         }

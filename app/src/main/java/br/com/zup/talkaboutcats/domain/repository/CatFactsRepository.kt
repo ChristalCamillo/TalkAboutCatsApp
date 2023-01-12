@@ -18,8 +18,9 @@ class CatFactsRepository(private val catFactsDAO: CatFactsDAO) {
         catFactsDAO.updateCatFactsFavorite(catFacts)
     }
 
-    fun insertCatFactFavorited(catFact: CatFactsResult){
-        catFactsDAO.insertCatFact(catFact)
+    fun insertCatFactFavorited(catFact: CatFactsResult) : CatFactsResult{
+        catFact.id = catFactsDAO.insertCatFact(catFact).toInt()
+        return catFact
     }
 
 
