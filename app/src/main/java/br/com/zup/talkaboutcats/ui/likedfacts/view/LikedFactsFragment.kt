@@ -41,9 +41,8 @@ class LikedFactsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setUpRvCatFactsList()
-        if(viewModel.catfactsFavoriteState.value ==null){
-            viewModel.getAllCatFactsFavorited()
-        }
+
+        viewModel.getAllCatFactsFavorited()
         initObserver()
     }
 
