@@ -38,28 +38,33 @@ class FactDetailsFragment : Fragment() {
         binding.likeButton.setOnClickListener {
             catfacts.isFavorite = !catfacts.isFavorite
             updateFavoriteIconColor()
-            viewModel.updateCatFactsFavorite(catfacts)
+            if (catfacts.id != null) {
+                viewModel.updateCatFactsFavorite(catfacts)
+            } else {
+                catfacts = viewModel.insertCatFactFavorite(catfacts)
+            }
+
             showFavoriteUpdateToast()
         }
     }
 
-    private fun getData(){
+    private fun getData() {
 
         val data = arguments?.getParcelable<CatFactsResult>(FACT_KEY)
 
-        if(data != null){
+        if (data != null) {
             catfacts = data
 
             catfacts.let {
                 binding.tvMeowfactDetail.text = it.catfact
                 updateFavoriteIconColor()
             }
-        }else{
+        } else {
             Toast.makeText(context, "Não foi possível carregar o fato", Toast.LENGTH_LONG).show()
         }
     }
 
-    private fun updateFavoriteIconColor(){
+    private fun updateFavoriteIconColor() {
         binding.likeButton.setImageDrawable(
             ContextCompat.getDrawable(
                 binding.root.context,
@@ -69,12 +74,12 @@ class FactDetailsFragment : Fragment() {
         )
     }
 
-    private fun showFavoriteUpdateToast(){
-        if(catfacts.isFavorite){
-            Toast.makeText(context, "fato foi favoritado com sucesso!", Toast.LENGTH_LONG).show()
-        }
-        else{
-            Toast.makeText(context, "fato foi desfavoritado", Toast.LENGTH_SHORT).show()
+    private fun showFavoriteUpdateToast() {
+        if (catfacts.isFavorite) {
+            Toast.makeText(context, "Este fato foi favoritado com sucesso!", Toast.LENGTH_LONG)
+                .show()
+        } else {
+            Toast.makeText(context, "Este fato foi desfavoritado", Toast.LENGTH_SHORT).show()
         }
     }
 }
