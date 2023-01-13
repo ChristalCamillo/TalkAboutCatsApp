@@ -1,4 +1,4 @@
-package br.com.zup.talkaboutcats.domain.single_live_event
+package br.com.zup.talkaboutcats.domain.model
 
 import android.util.Log
 import androidx.annotation.MainThread
@@ -38,6 +38,6 @@ class SingleLiveEvent<T> : MutableLiveData<T>() {
     }
 
     companion object {
-        private val TAG = "single_live_event"
+        private val TAG = "SingleLiveEvent"
     }
 }

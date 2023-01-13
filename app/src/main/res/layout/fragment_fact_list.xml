@@ -9,8 +9,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_facts_list"
-        tools:itemCount="10"
-        tools:listitem="@layout/fact_item"
+        tools:listitem="@layout/liked_fact_item"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="16dp"
