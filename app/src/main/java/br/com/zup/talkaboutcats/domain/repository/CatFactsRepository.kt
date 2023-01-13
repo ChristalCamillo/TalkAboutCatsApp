@@ -23,9 +23,8 @@ class CatFactsRepository(private val catFactsDAO: CatFactsDAO) {
         return catFact
     }
 
-
     suspend fun geAllCatFactsNetwork(): MutableList<CatFactsResult> {
-       var apiReturn = RetrofitService.apiService.getAllCatFactsNetwork(10)
+        var apiReturn = RetrofitService.apiService.getAllCatFactsNetwork(10)
         return createCatFactList(apiReturn.data)
     }
 

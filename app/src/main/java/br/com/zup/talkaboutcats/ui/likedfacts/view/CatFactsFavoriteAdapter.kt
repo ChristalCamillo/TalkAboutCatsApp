@@ -13,7 +13,7 @@ class CatFactsFavoriteAdapter(
 
     class ViewHolder(val binding: LikedFactItemBinding): RecyclerView.ViewHolder(binding.root){
         fun showCharacter(catfacts: CatFactsResult){
-            binding.tvCatFactLiked.text = catfacts.toString()
+            binding.tvCatFactLiked.text = catfacts.catfact
         }
     }
 

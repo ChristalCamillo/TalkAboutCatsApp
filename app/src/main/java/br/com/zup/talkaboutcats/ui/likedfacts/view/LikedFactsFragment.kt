@@ -32,7 +32,7 @@ class LikedFactsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View? {
         binding = FragmentLikedFactsBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -40,8 +40,15 @@ class LikedFactsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setUpRvCatFactsList()
+
+        viewModel.getAllCatFactsFavorited()
         initObserver()
-        showRecyclerView()
+    }
+
+    private fun setUpRvCatFactsList() {
+        binding.rvLikedFactsList.adapter = favoritedCatFactsAdapter
+        binding.rvLikedFactsList.layoutManager = LinearLayoutManager(context)
     }
 
     private fun initObserver(){
@@ -60,11 +67,6 @@ class LikedFactsFragment : Fragment() {
                 else -> {}
             }
         }
-    }
-
-    private fun showRecyclerView(){
-        binding.rvLikedFactsList.adapter = favoritedCatFactsAdapter
-        binding.rvLikedFactsList.layoutManager = LinearLayoutManager(context)
     }
 
     private fun goToCatFactsInfo(catfacts: CatFactsResult){
